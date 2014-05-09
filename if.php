@@ -34,19 +34,13 @@ if ($b >= $c) {
 if ($b == $c) {
     // output the appropriate result
     echo "$b is equal to $c\n";
-}
-
-elseif ($b === $c) {
+} elseif ($b === $c) {
     // output the appropriate result
     echo "$b is identical to $c\n";
-}
-
-elseif ($b != $c) {
+} elseif ($b != $c) {
     // output the appropriate result
     echo "$b is not equal to $c\n";
-}
-
-elseif ($b !== $c) {
+} elseif ($b !== $c) {
     // output the appropriate result
     echo "$b is not identical to $c\n";
 }
