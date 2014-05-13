@@ -15,4 +15,16 @@ foreach ($things as $things2) {
     } else if (is_int($things2)) {
         echo "{$things2} is an integer\n";
     }
+} 
+
+$things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
+foreach ($things as $things2) { 
+ 	if (is_scalar($things2)); {
+ 		echo "{$things2} is scalar\n";
+ 	}
+ }
+
+$things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
+foreach ($things as $things2) {
+	echo "{$things2}\n";
 }
