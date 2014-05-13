@@ -7,5 +7,6 @@ for($i = 1; $i <= 100; $i = $i + 1) {
 	echo "FIZZ\n";
 } elseif ($i % 5 == 0) {
     echo "BUZZ\n";
-} else echo "{$i}\n";
-}
+} else {
+	echo "{$i}\n";
+} }
