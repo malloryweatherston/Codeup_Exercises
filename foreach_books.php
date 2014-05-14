@@ -23,7 +23,11 @@ $books = array(
     )
 );
 
-    foreach ($books as $book) {
-    	foreach ($book as $title => $value){  
-          	echo "$title $key $value\n";
-} }
+    foreach ($books as $book => $properties) { 
+    	if ($properties['published'] > 1950) { 
+    	echo "$book\n"; 
+	foreach ($properties as $property => $value){ 
+        echo "{$property} : {$value}\n";
+		} 
+	}
+}
