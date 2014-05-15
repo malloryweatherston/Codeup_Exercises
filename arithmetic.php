@@ -1,31 +1,51 @@
 <?php
 
 function add($a, $b) {
-    echo $a + $b . "\n";
+	if (is_numeric($a) && is_numeric($b)){
+    	echo $a + $b . PHP_EOL;
+	} else { 
+		echo "ERROR: Both $a and $b should be numbers\n";
+	}
 }
 
 add(5,4);
 
 function subtract($a, $b) {
-    echo $a - $b . "\n";
+	if (is_numeric($a) && is_numeric($b)) { 
+    	echo $a - $b . PHP_EOL;
+    } else {
+    	echo "ERROR: Both $a and $b should be numbers\n";
+    }
 }
+
 
 subtract(7,4);
 
 function multiply($a, $b) {
-    echo $a * $b . "\n";
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo $a * $b . PHP_EOL;
+	} else { 
+		echo "ERROR: Both $a and $b should be numbers\n";
+	}
 }
+
 multiply(5,4);
 
 function divide($a, $b) {
-    echo $a / $b . "\n";
+	if (is_numeric($a) && is_numeric($b)) {
+    	echo $a / $b . PHP_EOL;
+	} else {
+		echo "ERROR: Both $a and $b should be numbers\n";
+	}
 }
 
 divide(10,2);
 
 function modulus($a, $b) {
-	echo $a % $b . "\n";
+	if (is_numeric($a) && is_numeric($b)) {
+		echo $a % $b . "\n";
+	} else {
+		echo "ERROR: Both $a and $b should be numbers\n";
+	}
 }
 modulus(2,2);
-
-?>
