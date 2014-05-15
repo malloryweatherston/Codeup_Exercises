@@ -1,11 +1,14 @@
 <?php
+function error ($a, $b) {
+		echo "ERROR: Both $a and $b should be numbers\n";
+	}
 
 function add($a, $b) {
 	if (is_numeric($a) && is_numeric($b)){
     	echo $a + $b . PHP_EOL;
 	} else { 
-		echo "ERROR: Both $a and $b should be numbers\n";
-	}
+		 error($a, $b); 
+	} 
 }
 
 add(5,4);
@@ -14,18 +17,18 @@ function subtract($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) { 
     	echo $a - $b . PHP_EOL;
     } else {
-    	echo "ERROR: Both $a and $b should be numbers\n";
+    	 error($a, $b); 
     }
 }
 
 
-subtract(7,4);
+subtract(7, 4);
 
 function multiply($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
     	echo $a * $b . PHP_EOL;
 	} else { 
-		echo "ERROR: Both $a and $b should be numbers\n";
+		error($a, $b);
 	}
 }
 
@@ -35,7 +38,7 @@ function divide($a, $b) {
 	if (is_numeric($a) && is_numeric($b) && $b != 0) {
     	echo $a / $b . PHP_EOL;
 	} else {
-		echo "ERROR: Both $a and $b should be numbers and you cannot divide by zero!\n";
+		 error($a, $b); 
 	}
 }
 
@@ -45,7 +48,8 @@ function modulus($a, $b) {
 	if (is_numeric($a) && is_numeric($b)) {
 		echo $a % $b . "\n";
 	} else {
-		echo "ERROR: Both $a and $b should be numbers\n";
+		error($a, $b);
 	}
 }
 modulus(2,2);
+
