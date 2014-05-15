@@ -32,10 +32,10 @@ function multiply($a, $b) {
 multiply(5,4);
 
 function divide($a, $b) {
-	if (is_numeric($a) && is_numeric($b)) {
+	if (is_numeric($a) && is_numeric($b) && $b != 0) {
     	echo $a / $b . PHP_EOL;
 	} else {
-		echo "ERROR: Both $a and $b should be numbers\n";
+		echo "ERROR: Both $a and $b should be numbers and you cannot divide by zero!\n";
 	}
 }
 
