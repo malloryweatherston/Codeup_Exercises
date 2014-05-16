@@ -1,55 +1,61 @@
 <?php
-function error ($a, $b) {
-		echo "ERROR: Both $a and $b should be numbers\n";
-	}
 
-function add($a, $b) {
-	if (is_numeric($a) && is_numeric($b)){
-    	echo $a + $b . PHP_EOL;
+function check($a, $b) {
+	if (is_numeric($a) && is_numeric($b)) {
+		return true;
 	} else { 
-		 error($a, $b); 
+		echo "ERROR: Both $a and $b should be numbers\n";
+		return false; 
+	}
+}
+
+function divide_zero($a, $b) {
+	if ($b === 0) {
+		echo "ERROR: Cannot divide by Zero";
+		return "false";
+	
 	} 
 }
 
-add(5,4);
+function add($a, $b) {
+	if (check($a, $b)) {
+		return $a + $b; 
+	}
+}
 
 function subtract($a, $b) {
-	if (is_numeric($a) && is_numeric($b)) { 
-    	echo $a - $b . PHP_EOL;
-    } else {
-    	 error($a, $b); 
-    }
+	if (check($a, $b)) {
+		return $a - $b; 
+	}
 }
-
-
-subtract(7, 4);
 
 function multiply($a, $b) {
-	if (is_numeric($a) && is_numeric($b)) {
-    	echo $a * $b . PHP_EOL;
-	} else { 
-		error($a, $b);
+	if (check($a, $b)) {
+		return $a * $b; 
 	}
 }
-
-multiply(5,4);
 
 function divide($a, $b) {
-	if (is_numeric($a) && is_numeric($b) && $b != 0) {
-    	echo $a / $b . PHP_EOL;
-	} else {
-		 error($a, $b); 
+	if (divide_zero($a, $b)) { 
+	} elseif (check($a, $b)) {
+		return $a * $b;
 	}
-}
 
-divide(10,2);
+}
 
 function modulus($a, $b) {
-	if (is_numeric($a) && is_numeric($b)) {
-		echo $a % $b . "\n";
-	} else {
-		error($a, $b);
-	}
+	if (check($a, $b)) {
+		return $a % $b; 
+	} 
 }
-modulus(2,2);
+
+echo add(5, 1) . PHP_EOL;
+
+echo subtract(8, 4) . PHP_EOL;
+
+echo multiply(5,4) . PHP_EOL;
+
+echo divide(10,0) . PHP_EOL;
+
+echo modulus(2,2) . PHP_EOL;
 
