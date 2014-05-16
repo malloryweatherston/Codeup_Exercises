@@ -13,7 +13,7 @@ if (empty($x)) {
 	} if (isset($x)) {
 		echo "$variable is not set\n";
 	} else {
-		echo "$varible is not set\n";
+		echo "$variable is not set\n";
 	}
 }
 
