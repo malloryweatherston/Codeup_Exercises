@@ -5,12 +5,6 @@ $names = ['Tina', 'Dana', 'Mike', 'Amy', 'Adam'];
 
 $compare = ['Tina', 'Dean', 'Mel', 'Amy', 'Michael'];
 
-//$query = 'Tina' || 'Bob';
-
-//$result = array_search($query, $names); 
-
-//var_dump($result);
-
 function array_has_value($needle, $haystack) {
  $result = array_search($needle, $haystack); 
  if ($result === false ) {
