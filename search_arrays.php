@@ -16,18 +16,27 @@ function array_has_value($needle, $haystack) {
  if ($result === false ) {
 	return false;
 	} else {
-		return true; 
+	return true; 
 	}
 
 return array_search($needle, $haystack); 
 }
 
-//$result2 = array_search($query2, $compare);
 
-//var_dump($result2); 
 
-$query = 'Tina' || 'Bob';
+var_dump(array_has_value('Bob' , $names));
 
-$result = array_search($query, $names);
 
-var_dump(array_has_value($result));
+function compare_arrays($array1, $array2) {
+
+	$count =  0; 
+	foreach($array1 as $value1) {
+		if (array_has_value($value1, $array2)){
+			$count++;
+		}
+	}
+
+	return $count;
+}
+
+var_dump(compare_arrays($names, $compare)); 
