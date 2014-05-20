@@ -12,12 +12,21 @@ $physicists_string = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mal
 
 // Converts array into list n1, n2, ..., and n3
 function humanized_list($string) {
-  $array = explode(',' , $string);
+  $array = explode(', ' , $string);
+  sort($array);
+  //$array = sort($array); 
   $pop = array_pop($array);
-  $newstring = implode(',' , $array); 
-   
+  $newstring = implode(', ' , $array); 
+  return "$newstring, and $pop\n";
+
+
   
-  return "$newstring and $pop\n"; 
+  if sort($upper = false) {
+     $result = 
+
+  // }
+  
+  //return "$newstring and $pop\n"; 
 }
   
 
