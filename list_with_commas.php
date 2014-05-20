@@ -2,13 +2,6 @@
 
 $physicists_string = 'Gordon Freeman, Samantha Carter, Sheldon Cooper, Quinn Mallory, Bruce Banner, Tony Stark';
 
-// $physicists_array = explode(', ', $physicists_string);
-
-// var_dump($physicists_array);
-
-// $physicists_string  = implode(', ' , $physicists_array); 
-
-// echo $physicists_string;
 
 // Converts array into list n1, n2, ..., and n3
 function humanized_list($string, $sort_array = false) {
@@ -21,13 +14,7 @@ function humanized_list($string, $sort_array = false) {
   $newstring = implode(', ' , $array); 
   return "$newstring, and $pop\n";
 
-
   
-  //if sort($upper = false) {
-    // $result = !sort($array);
-  
-  
-  //return "$newstring and $pop\n"; 
 }
   
 
