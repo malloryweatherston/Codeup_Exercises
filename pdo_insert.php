@@ -36,8 +36,10 @@ $national_parks = [
 ];
 
 foreach ($national_parks as $national_park) {
-    $query = "INSERT INTO $national_parks(name, location, date_established, area_in_acres) VALUES ('{$national_parks['name']}', '{$national_parks['location']}', '{$national_parks['date_established']}', '{$national_parks['area_in_acres']}')";
+    $query = "INSERT INTO national_parks(name, location, date_established, area_in_acres) VALUES ('{$national_park['name']}', '{$national_park['location']}', '{$national_park['date_established']}', '{$national_park['area_in_acres']}')";
 
     $dbc->exec($query);
+
+    // echo "Inserted ID: " . $dbc->lastInsertId() . PHP_EOL;
 
 }
